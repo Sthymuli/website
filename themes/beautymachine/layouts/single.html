@@ -1,0 +1,29 @@
+{{ define "main" }}
+<header class="page-head">
+  <h1>{{ .Title | markdownify }}</h1>
+  {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  {{ if or .Params.author (not .Date.IsZero) }}
+  <p class="meta">
+    {{ with .Params.author }}<span>{{ . }}</span>{{ end }}
+    {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>{{ end }}
+  </p>
+  {{ end }}
+</header>
+
+<article class="content">
+  {{ .Content }}
+</article>
+
+{{ with .Params.tags }}
+<ul class="tags">
+  {{ range . }}<li><a href="{{ (printf "tags/%s/" (. | urlize)) | relURL }}">{{ . }}</a></li>{{ end }}
+</ul>
+{{ end }}
+
+{{ if and .Section (not .Params.hidePager) }}
+<nav class="pager">
+  {{ with .PrevInSection }}<a class="prev" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ else }}<span></span>{{ end }}
+  {{ with .NextInSection }}<a class="next" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+</nav>
+{{ end }}
+{{ end }}

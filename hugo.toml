@@ -1,0 +1,33 @@
+# The GitHub Action overrides baseURL with the real Pages URL at build time.
+baseURL = "https://sthymuli.github.io/website/"
+languageCode = "en"
+title = "Beauty & the Machine"
+theme = "beautymachine"
+
+[params]
+  description = "Robotics, aesthetics and education."
+  # Sections listed on the home page, newest first.
+  homeSections = ["projects"]
+  homeListTitle = "Latest"
+  homeLimit = 6
+  footer = "© {Year} · Built with [Hugo](https://gohugo.io)"
+
+[[menu.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 1
+[[menu.main]]
+  name = "Projects"
+  pageRef = "/projects"
+  weight = 2
+[[menu.main]]
+  name = "About"
+  pageRef = "/about"
+  weight = 3
+
+[markup.goldmark.renderer]
+  unsafe = true  # allow raw HTML inside markdown
+
+[markup.highlight]
+  noClasses = true
+  style = "bw"

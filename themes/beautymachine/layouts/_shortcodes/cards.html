@@ -1,0 +1,22 @@
+{{/*
+  A grid of round cards. Each line of the inner content is: Title | text | link (link optional).
+  {{< cards >}}
+  Robotics | Robots as tools for learning | projects/
+  Aesthetics | Soft materials, playful design
+  {{< /cards >}}
+*/}}
+<div class="cards">
+  {{ range split (trim .Inner "\n") "\n" }}
+  {{ $f := split . "|" }}
+  {{ if ge (len $f) 1 }}
+  {{ $title := trim (index $f 0) " " }}
+  {{ $text := "" }}{{ if ge (len $f) 2 }}{{ $text = trim (index $f 1) " " }}{{ end }}
+  {{ $link := "" }}{{ if ge (len $f) 3 }}{{ $link = trim (index $f 2) " " }}{{ end }}
+  {{ if $link }}<a class="card" href="{{ $link | relURL }}">{{ else }}<div class="card">{{ end }}
+    <span class="card-circle" aria-hidden="true"></span>
+    <strong>{{ $title | markdownify }}</strong>
+    {{ with $text }}<span>{{ . | markdownify }}</span>{{ end }}
+  {{ if $link }}</a>{{ else }}</div>{{ end }}
+  {{ end }}
+  {{ end }}
+</div>

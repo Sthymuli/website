@@ -1,0 +1,9 @@
+{{/*
+  A round image with an optional caption.
+  {{< circle src="images/robot.jpg" alt="Thymio" caption="Thymio in costume" size="240" >}}
+*/}}
+{{ $size := .Get "size" | default "260" }}
+<figure class="circle-figure">
+  <img class="circle-img" src="{{ .Get "src" | relURL }}" alt="{{ .Get "alt" | default (.Get "caption") }}" style="width: {{ $size }}px" loading="lazy">
+  {{ with .Get "caption" }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

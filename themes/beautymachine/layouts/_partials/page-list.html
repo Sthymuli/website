@@ -1,0 +1,15 @@
+{{/* Renders a list of pages. Context: a page collection. */}}
+<ul class="page-list">
+  {{ range . }}
+  <li>
+    <a href="{{ .RelPermalink }}">
+      {{ with .Params.image }}<img class="thumb" src="{{ . | relURL }}" alt="" loading="lazy">{{ else }}<span class="thumb thumb-empty" aria-hidden="true"></span>{{ end }}
+      <span class="entry">
+        <span class="entry-title">{{ .Title | markdownify }}</span>
+        {{ with .Description }}<span class="entry-desc">{{ . }}</span>{{ end }}
+      </span>
+      {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>{{ end }}
+    </a>
+  </li>
+  {{ end }}
+</ul>

@@ -1,0 +1,10 @@
+name = "beautymachine"
+license = "MIT"
+description = "Black & white, thin lines, circles. A minimal theme derived from hugo-xmin."
+min_version = "0.146.0"
+
+[original]
+  name = "XMin"
+  author = "Yihui Xie"
+  homepage = "https://github.com/yihui/hugo-xmin"
+  repo = "https://github.com/yihui/hugo-xmin"
