@@ -1,5 +1,5 @@
-# The GitHub Action overrides baseURL with the real Pages URL at build time.
-baseURL = "https://sthymuli.github.io/website/"
+# Custom domain (also set in static/CNAME).
+baseURL = "https://sthymuli.com/"
 languageCode = "en"
 title = "Beauty & the Machine"
 theme = "beautymachine"
