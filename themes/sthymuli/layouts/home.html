@@ -1,8 +1,9 @@
 {{ define "main" }}
-<section class="hero"{{ with .Params.background }} style="background-image: url({{ . | relURL }})"{{ end }}>
+<section class="hero"{{ with .Params.background }} style="background-image: url({{ . | relURL }})" data-background="{{ . | relURL }}"{{ end }}{{ with .Params.keepout }} data-keepout="{{ delimit . "," }}"{{ end }}>
   <div class="hero-text">
     <h1>{{ range split (trim (.Params.heading | default site.Title) "\n") "\n" }}<span>{{ . }}</span>{{ end }}</h1>
     {{ with .Content }}<div class="hero-body">{{ . }}</div>{{ end }}
   </div>
 </section>
+<script src="{{ "js/hero.js" | relURL }}" defer></script>
 {{ end }}

@@ -24,8 +24,6 @@ theme = "sthymuli"
   name = "Get in touch"
   pageRef = "/contact"
   weight = 4
-  [menu.main.params]
-    cta = true  # the black pill rests on this item
 
 [markup.goldmark.renderer]
   unsafe = true  # allow raw HTML inside markdown

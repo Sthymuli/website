@@ -6,7 +6,7 @@ The Sthymuli site: Helvetica, uppercase, black on the warm grey of the robot pho
 
 | File                          | Page                                                    |
 |-------------------------------|---------------------------------------------------------|
-| `content/_index.md`           | Home: `heading` (one line per line) over `background`   |
+| `content/_index.md`           | Home: `heading` (one line per line) over `background`; `keepout` is the robot circle the heading avoids |
 | `content/projects/_index.md`  | Projects intro; each file in `content/projects/` adds a row below it |
 | `content/about.md`            | About                                                   |
 | `content/contact.md`          | Get in touch                                            |
@@ -34,7 +34,7 @@ Shortcodes: `circle` (round image), `trio` (three overlapping circles), `cards` 
 
 ## Menu
 
-Menu items are in `hugo.toml`. The black pill rests on the item with `params.cta = true` and slides to the hovered link (`themes/sthymuli/static/js/menu.js`).
+Menu items are in `hugo.toml`. The black pill rests on the current page and slides to the hovered link (`themes/sthymuli/static/js/menu.js`).
 
 ## Logo
 
