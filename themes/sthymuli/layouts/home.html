@@ -1,0 +1,8 @@
+{{ define "main" }}
+<section class="hero"{{ with .Params.background }} style="background-image: url({{ . | relURL }})"{{ end }}>
+  <div class="hero-text">
+    <h1>{{ range split (trim (.Params.heading | default site.Title) "\n") "\n" }}<span>{{ . }}</span>{{ end }}</h1>
+    {{ with .Content }}<div class="hero-body">{{ . }}</div>{{ end }}
+  </div>
+</section>
+{{ end }}

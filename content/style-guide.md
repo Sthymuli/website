@@ -2,6 +2,7 @@
 title: "Style guide"
 date: 2026-10-06
 description: "Every Markdown element and shortcode the theme supports."
+# Not in the menu; open it at /style-guide/.
 tags: ["guide"]
 ---
 
@@ -9,7 +10,7 @@ Plain paragraphs, **bold**, *italic*, [links](https://gohugo.io) and `inline cod
 
 ## Headings
 
-Second-level headings get a small circle. Third-level ones stay plain.
+Second-level headings are bold capitals. Third-level ones stay plain.
 
 ### A third-level heading
 
@@ -17,7 +18,7 @@ Second-level headings get a small circle. Third-level ones stay plain.
 
 ## Lists
 
-- Thin circles as bullets
+- Black dots as bullets
 - One idea per line
 - Nothing more
 
@@ -36,7 +37,7 @@ Second-level headings get a small circle. Third-level ones stay plain.
 | Pillar     | Focus                         |
 |------------|-------------------------------|
 | Robotics   | Robots as learning tools      |
-| Aesthetics | Soft materials, playful design |
+| Aesthetics | Thoughtful design             |
 | Education  | Motivation and confidence     |
 
 ## Code

@@ -1,16 +1,12 @@
 # Custom domain (also set in static/CNAME).
 baseURL = "https://sthymuli.com/"
 languageCode = "en"
-title = "Beauty & the Machine"
-theme = "beautymachine"
+title = "Sthymuli"
+theme = "sthymuli"
 
 [params]
-  description = "Robotics, aesthetics and education."
-  # Sections listed on the home page, newest first.
-  homeSections = ["projects"]
-  homeListTitle = "Latest"
-  homeLimit = 6
-  footer = "© {Year} · Built with [Hugo](https://gohugo.io)"
+  description = "Sthymuli, a new educational robot."
+  footer = "© {Year} Sthymuli"
 
 [[menu.main]]
   name = "Home"
@@ -24,6 +20,12 @@ theme = "beautymachine"
   name = "About"
   pageRef = "/about"
   weight = 3
+[[menu.main]]
+  name = "Get in touch"
+  pageRef = "/contact"
+  weight = 4
+  [menu.main.params]
+    cta = true  # the black pill rests on this item
 
 [markup.goldmark.renderer]
   unsafe = true  # allow raw HTML inside markdown

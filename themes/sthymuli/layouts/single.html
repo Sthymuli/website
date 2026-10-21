@@ -10,7 +10,7 @@
   {{ end }}
 </header>
 
-<article class="content">
+<article class="content{{ with .Params.class }} {{ . }}{{ end }}">
   {{ .Content }}
 </article>
 

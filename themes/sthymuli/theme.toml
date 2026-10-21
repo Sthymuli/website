@@ -1,6 +1,6 @@
-name = "beautymachine"
+name = "sthymuli"
 license = "MIT"
-description = "Black & white, thin lines, circles. A minimal theme derived from hugo-xmin."
+description = "Helvetica, uppercase, black on warm grey. A minimal theme derived from hugo-xmin."
 min_version = "0.146.0"
 
 [original]

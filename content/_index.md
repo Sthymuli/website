@@ -1,13 +1,9 @@
 ---
 title: "Home"
-heading: "Beauty & the Machine"
-subtitle: "Can robotics and aesthetics come together in education?"
+# Each line is shown on its own line.
+heading: |
+  This is Sthymuli,
+  a new educational
+  robot
+background: "images/background.jpeg"
 ---
-
-{{< trio a="Robotics" b="Aesthetics" c="Education" >}}
-
-{{< cards >}}
-Robotics | Robots as tools for learning | projects/
-Aesthetics | Soft materials, playful design | projects/
-Education | Creativity, motivation, confidence | about/
-{{< /cards >}}

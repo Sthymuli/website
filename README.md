@@ -1,31 +1,49 @@
 # website
 
-A minimal Hugo site in the spirit of *The Beauty & the Machine*: black and white, thin lines, circles.
+The Sthymuli site: Helvetica, uppercase, black on the warm grey of the robot photo.
 
-## Add a page
+## Pages
 
-```sh
-hugo new content projects/my-page.md   # then edit it; set draft: false
-```
+| File                          | Page                                                    |
+|-------------------------------|---------------------------------------------------------|
+| `content/_index.md`           | Home: `heading` (one line per line) over `background`   |
+| `content/projects/_index.md`  | Projects intro; each file in `content/projects/` adds a row below it |
+| `content/about.md`            | About                                                   |
+| `content/contact.md`          | Get in touch                                            |
+| `content/style-guide.md`      | Every Markdown element, not in the menu (`/style-guide/`) |
 
-Or just create the `.md` file by hand. Images go in `static/images/` and are referenced as `images/name.jpg`.
+## Add a robot or add-on
+
+Copy `content/projects/example-robot.md`, edit it and set `draft: false`. Text above `<!--more-->` shows on the Projects page.
+
+Images go in `static/images/` and are referenced as `images/name.jpg`.
 
 Front matter options:
 
-| key           | effect                                    |
-|---------------|-------------------------------------------|
-| `title`       | page title                                |
-| `description` | lead line under the title, and in lists   |
-| `date`        | shown on the page and used for sorting    |
-| `image`       | round thumbnail in page lists             |
-| `tags`        | tag pills at the bottom                   |
+| key           | effect                                              |
+|---------------|-----------------------------------------------------|
+| `title`       | page title                                          |
+| `description` | lead line under the title, and on the Projects page |
+| `image`       | round picture on the Projects page                  |
+| `weight`      | order on the Projects page (lowest first)           |
+| `date`        | shown on the page                                   |
+| `tags`        | tag pills at the bottom                             |
+| `class`       | extra class on the content, e.g. `links` for big link rows |
 
-Shortcodes: `circle` (round image), `trio` (three overlapping circles), `cards` (row of round cards). See `content/projects/style-guide.md`.
+Shortcodes: `circle` (round image), `trio` (three overlapping circles), `cards` (row of round cards). See `content/style-guide.md`.
+
+## Menu
+
+Menu items are in `hugo.toml`. The black pill rests on the item with `params.cta = true` and slides to the hovered link (`themes/sthymuli/static/js/menu.js`).
+
+## Logo
+
+`static/images/logo.svg` is the vector logo. The header uses the same path from `themes/sthymuli/layouts/_partials/logo.html`, and `themes/sthymuli/static/favicon.svg` for the browser tab.
 
 ## Preview locally
 
 ```sh
-hugo server
+hugo server       # add -D to show drafts
 ```
 
 ## Publish
@@ -35,4 +53,4 @@ One-time setup: in the repo on GitHub, go to **Settings → Pages → Source** a
 
 ## Theme
 
-`themes/beautymachine/` is derived from [hugo-xmin](https://github.com/yihui/hugo-xmin) (MIT). Colours are CSS variables at the top of `themes/beautymachine/static/css/style.css`.
+`themes/sthymuli/` is derived from [hugo-xmin](https://github.com/yihui/hugo-xmin) (MIT). Colours and sizes are CSS variables at the top of `themes/sthymuli/static/css/style.css`.

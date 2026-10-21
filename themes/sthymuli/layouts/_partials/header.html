@@ -1,0 +1,17 @@
+<header class="site-header">
+  <a class="brand" href="{{ "" | relURL }}">
+    {{ partial "logo.html" . }}
+    <span class="brand-name">{{ site.Title }}</span>
+  </a>
+  <nav aria-label="Main">
+    {{/* The black pill (js/menu.js) rests on the item with params.cta and follows the hovered link. */}}
+    <ul class="menu">
+      <li class="menu-pill" role="presentation" aria-hidden="true"></li>
+      {{ $current := . }}
+      {{ range site.Menus.main }}
+      {{ $active := and (not $current.IsHome) (or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .)) }}
+      <li><a href="{{ .URL | relURL }}"{{ with .Params.cta }} class="cta"{{ end }}{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

@@ -1,12 +1,20 @@
 ---
 title: "About"
-description: "Simple, direct, to the point."
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 ---
 
-This site uses neutral colours around black and white, with the circle as the main shape: thin lines, nothing extra.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-## Writing pages
+## Lorem ipsum
 
-Every page is a Markdown file in `content/`. A new file in `content/projects/` shows up in the projects list and on the home page.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-> It works most times.
+- Curabitur pretium tincidunt lacus
+- Nulla gravida orci a odio
+- Nullam varius, turpis et commodo pharetra
+
+## Dolor sit amet
+
+Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.
+
+> Maecenas fermentum consequat mi. Donec fermentum.

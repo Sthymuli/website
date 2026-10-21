@@ -1,0 +1,18 @@
+{{/* One large row per page, image and text alternating sides. Context: a page collection. */}}
+{{ with . }}
+<div class="showcase">
+  {{ range . }}
+  <article class="showcase-item">
+    <a class="showcase-media" href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
+      {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ else }}<span class="showcase-empty"></span>{{ end }}
+    </a>
+    <div class="showcase-text">
+      <h2><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h2>
+      {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+      {{ with .Summary }}<div class="showcase-summary">{{ . }}</div>{{ end }}
+      <a class="button" href="{{ .RelPermalink }}">Read more</a>
+    </div>
+  </article>
+  {{ end }}
+</div>
+{{ end }}
